@@ -8,21 +8,67 @@ main ul {
   padding-inline-start: 0;
 }
 
+body {
+  background-color: #d8d8d817;
+}
+
 form {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 80px;
+}
+
+input {
+  margin: 5px;
+  border-radius: 15px;
+  color: #002B49;
+  padding: 5px;
+  background-color: #F8F8F8;
+  border-style: solid;
+  width: 300px;
+}
+
+button {
+  background-color: #088cb8;
+  border-radius: 8px;
+  border-style: none;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 6px 16px;
+  text-align: center;
+}
+
+button:hover {
+  background-color: #00a8e09f;
 }
 
 .textContainer {
   background-color: #D8D8D8;
   padding: 10px;
-  margin: 5px
+  margin: 5px;
+  border-radius: 5px
+}
+
+.textContainer h4 {
+  margin: 0;
 }
 
 .items {
   display: grid;
   width: 100%;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   list-style: none;
+}
+
+.error-message {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 10px;
+  border-radius: 5px
+}
+
+.error-message p {
+  margin: 0;
 }
