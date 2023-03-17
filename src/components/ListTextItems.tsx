@@ -8,7 +8,10 @@ export default function ListTextItems(props: { listItems: IText[] }) {
         listItems.map((textData: IText, index: number) => (
           <li className="textItem" key={`${index}-${textData.date}`}>
             <div className='textContainer'>
-              <em>{textData.text}</em>
+              <h4>{textData.date}</h4>
+              <p>
+                <em>{textData.text}</em>
+              </p>
             </div>
           </li>
         ))
