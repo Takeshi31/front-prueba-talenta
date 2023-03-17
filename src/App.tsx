@@ -1,5 +1,8 @@
 import { SetStateAction, useEffect, useRef, useState } from 'react'
 
+import ErrorComponent from './components/Error'
+import FormComponent from './components/FormComponent'
+
 import ListTextItems from './components/ListTextItems'
 import { useListTextItems } from './hooks/useListTextItems'
 import './App.css'
@@ -29,6 +32,7 @@ function App() {
 
   const handleSubmit = (event: { preventDefault: () => void }) => {
     event.preventDefault()
+    if (!inputText) return
     sendText()
   }
 
@@ -44,11 +48,14 @@ function App() {
   return (
     <>
       <header>
-        <form className='form' onSubmit={handleSubmit}>
-          <input value={ inputText } ref={inputRef} onChange={ handleChange }placeholder='Lorem ipsum' />
-          <button type='submit' >Enviar text</button>
-        </form>
-        {error && <div>{error}</div>}
+        <FormComponent
+          inputText={inputText}
+          inputRef={inputRef}
+          handleChange={handleChange}
+          handleSubmit={handleSubmit} />
+        {
+          error && <ErrorComponent errorMessage={error}/>
+        }
       </header>
       <main>
         {
