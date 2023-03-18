@@ -15,16 +15,19 @@ Antes de comenzar a trabajar con este proyecto, asegúrate de tener instalado:
 
   ```bash
   git clone https://github.com/Takeshi31/front-prueba-talenta.git
+  ```
 
 2. Entra en la carpeta del proyecto:
 
   ```bash
   cd front-prueba-talenta
+  ```
 
 3. Instala las dependencias del proyecto:
 
   ```bash
   npm install
+  ```
 
 ## Instrucciones de uso
 
@@ -32,6 +35,7 @@ Antes de comenzar a trabajar con este proyecto, asegúrate de tener instalado:
 
   ```bash
   npm run dev
+  ```
 
 Esto iniciará un servidor local (verificar el puerto en el que se levanto), donde podrás ver la aplicación.
 
@@ -39,6 +43,7 @@ Esto iniciará un servidor local (verificar el puerto en el que se levanto), don
 
   ```bash
   npm run build
+  ```
 
 Esto creará una carpeta llamada dist con los archivos optimizados para producción.
 
