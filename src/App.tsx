@@ -4,7 +4,7 @@ import ErrorComponent from './components/Error'
 import FormComponent from './components/FormComponent'
 
 import ListTextItems from './components/ListTextItems'
-import { useListTextItems } from './hooks/useListTextItems'
+import useListTextItems from './hooks/useListTextItems'
 import './App.css'
 
 function App() {

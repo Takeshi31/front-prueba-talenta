@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import { IText } from "../interfaces/text.interface"
 
-export function useListTextItems({inputText}: {inputText: string}) {
+export default function useListTextItems({inputText}: {inputText: string}) {
   const [response, setResponse] = useState<IText[]>();
   const baseUrl = 'http://localhost:3000/'
   const endpointName = 'add-text'
@@ -19,7 +19,7 @@ export function useListTextItems({inputText}: {inputText: string}) {
       else
         throw new Error(`Error code ${response.status}`);
     })
-    .then(data => setResponse(data))
+    .then(data => setResponse(data.storageText))
     .catch(err => console.error("ERROR: ", err.message))
   }
   return {listText: response as IText[], sendText};
