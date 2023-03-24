@@ -10,8 +10,8 @@ export default function useListTextItems({inputText}: {inputText: string}) {
     text: inputText
   })
 
-  const sendText = () => {
-    fetch(`${baseUrl}${endpointName}?${params}`, {
+  const sendText = async () => {
+    await fetch(`${baseUrl}${endpointName}?${params}`, {
       method: 'GET'
     }).then(response => {
       if (response.ok)
@@ -19,7 +19,7 @@ export default function useListTextItems({inputText}: {inputText: string}) {
       else
         throw new Error(`Error code ${response.status}`);
     })
-    .then(data => setResponse(data.storageText))
+    .then(data => setResponse(data))
     .catch(err => console.error("ERROR: ", err.message))
   }
   return {listText: response as IText[], sendText};
