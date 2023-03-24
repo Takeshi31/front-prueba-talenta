@@ -34,8 +34,9 @@ export default function ListTextItems(props: { listItems: IText[] }) {
     items && (
       <ul className="items">
         {items.map((textData: IText, index: number) => (
-          <li className="textItem" key={`${index}-${textData.date}`} onClick={() => deleteText(textData.id)}>
+          <li className="textItem" key={`${index}-${textData.date}`}>
             <div className='textContainer'>
+              <button style={{marginBottom: '8px' }} onClick={() => deleteText(textData.id)}>Eliminar</button>
               <h4>{textData.date}</h4>
               <p>
                 <em>{textData.text}</em>
