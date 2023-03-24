@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { IText } from '../interfaces/text.interface';
 
-const baseUrl = 'http://localhost:3001/';
+const baseUrl = 'http://localhost:3000/';
 const endpointName = 'delete-text';
 
 export default function ListTextItems(props: { listItems: IText[] }) {
