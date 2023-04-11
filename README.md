@@ -1,6 +1,6 @@
 # Front React
 
-Este es el proyecto de Frontend de la Prueba Técnica para el proceso de selección en Talenta. Está construido con [React](https://reactjs.org/) y [TypeScript](https://www.typescriptlang.org/), utilizando [Vite](https://vitejs.dev/) como herramienta de construcción.
+Este es el proyecto de Frontend React. Está construido con [React](https://reactjs.org/) y [TypeScript](https://www.typescriptlang.org/), utilizando [Vite](https://vitejs.dev/) como herramienta de construcción.
 
 ## Requisitos previos
 
@@ -14,7 +14,7 @@ Antes de comenzar a trabajar con este proyecto, asegúrate de tener instalado:
 1. Clona este repositorio en tu máquina local:
 
   ```bash
-  git clone https://github.com/Takeshi31/front-prueba-talenta.git
+  git clone https://github.com/Takeshi31/front-react.git
   ```
 
 2. Entra en la carpeta del proyecto:
