@@ -6,13 +6,13 @@ export default function useListTextItems({inputText}: {inputText: string}) {
   const [response, setResponse] = useState<IText[]>();
   const baseUrl = 'http://localhost:3000/'
   const endpointName = 'add-text'
-  const params = new URLSearchParams({
-    text: inputText
-  })
 
   const sendText = async () => {
-    await fetch(`${baseUrl}${endpointName}?${params}`, {
-      method: 'GET'
+    await fetch(`${baseUrl}${endpointName}`, {
+      method: 'POST',
+      body: JSON.stringify({
+        text: inputText
+      })
     }).then(response => {
       if (response.ok)
         return response.json()

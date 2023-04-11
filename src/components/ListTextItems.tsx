@@ -1,16 +1,16 @@
-import { useState, useEffect } from 'react';
-import { IText } from '../interfaces/text.interface';
+import { useState, useEffect } from 'react'
+import { IText } from '../interfaces/text.interface'
 
-const baseUrl = 'http://localhost:3000/';
-const endpointName = 'delete-text';
+const baseUrl = 'http://localhost:3000/'
+const endpointName = 'delete-text'
 
 export default function ListTextItems(props: { listItems: IText[] }) {
-  const { listItems } = props;
-  const [items, setItems] = useState<IText[]>([]);
+  const { listItems } = props
+  const [items, setItems] = useState<IText[]>([])
 
   useEffect(() => {
-    setItems(listItems);
-  }, [listItems]);
+    setItems(listItems)
+  }, [listItems])
 
   function deleteText(id: number) {
     fetch(`${baseUrl}${endpointName}/${id.toString()}`, {
@@ -18,16 +18,16 @@ export default function ListTextItems(props: { listItems: IText[] }) {
     })
       .then((response) => {
         if (response.ok) {
-          return response.json();
+          return response.json()
         } else {
-          throw new Error(`Error code ${response.status}`);
+          throw new Error(`Error code ${response.status}`)
         }
       })
       .then((data) => {
-        setItems(data);
-        console.log(data);
+        setItems(data)
+        console.log(data)
       })
-      .catch((err) => console.error('ERROR: ', err.message));
+      .catch((err) => console.error('ERROR: ', err.message))
   }
 
   return (
@@ -46,5 +46,5 @@ export default function ListTextItems(props: { listItems: IText[] }) {
         ))}
       </ul>
     )
-  );
+  )
 }
