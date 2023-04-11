@@ -1,4 +1,4 @@
-# Front Prueba Talenta
+# Front React
 
 Este es el proyecto de Frontend de la Prueba Técnica para el proceso de selección en Talenta. Está construido con [React](https://reactjs.org/) y [TypeScript](https://www.typescriptlang.org/), utilizando [Vite](https://vitejs.dev/) como herramienta de construcción.
 
